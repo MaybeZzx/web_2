@@ -43,6 +43,7 @@ body{
 .container {
     max-width: 1408px;
     margin: 0 auto;
+    
 
 }
 header {
@@ -107,7 +108,6 @@ header {
 .slider {
     height: 700px;
 }
-
 .slider img{
     width: 100%;
     height: 100%;
@@ -117,13 +117,14 @@ header {
     z-index: 3;
     position: absolute;
     color: #ffffff;
-    margin: 5% 5% auto 40%;
+    margin: 5% 1% auto 40%;
     max-width: 765px;
+    font-size: 20px;
     
 }
 .text__slider h2{
     font-weight: 300;
-    font-size: 70px;
+    font-size: 3.5em;
     line-height: 1.03;
     text-align: right;
     margin: 0;
@@ -135,7 +136,7 @@ header {
     margin: 4.5% 11% 0 auto;
     line-height: 1.4;
     text-align: center;
-    font-size: 20px;
+    font-size: 1em;
     font-weight: 400;
     font-family: "Mulish", sans-serif;
 }
@@ -153,28 +154,32 @@ header {
 .cabins__wrapper {
     max-height: 693px;
     min-height: 438px;
+    height: auto;
     width: 100%;
     margin-bottom: 10.66%;
 }
 .cabins__desc {
-    max-height: 351px;
+    font-size: 16px;
+    max-height: 390px;
     max-width: 465px;
+    height: auto;
     margin: 5% 0 0 10%;
 }
 .cabins__desc h2{
-    font-size: 40px;
+    font-size: 2.5em;
     font-weight: 400;
     margin-bottom: 1.25em;
 }
 .cabins__desc p {
     color: #000000;
-    font-size: 16px;
+    font-size: 1em;
     line-height: 1.9;
-    max-height: 211px;
-    margin-bottom: 20px;
+    height: auto;
+    width: auto;
+    margin-bottom: 5%;
 }
 .cabins__desc-href{
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 600;
     text-decoration: underline;
 }
@@ -187,10 +192,11 @@ header {
 .cabins__video {
     width: 100%;
     max-height: 387px;
+    height: auto;
 }
 .cabins__video ul{
     display: grid;
-    height: 387px;
+    height: 100%;
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 0 2%;
@@ -316,16 +322,16 @@ header {
     max-height: 971px;
     height: 1000px;
     background:#5B6460;
+    font-size: 18px;
 }
 .facilities__header {
     position: absolute;
     background-color: transparent;
     top: 16%;
-    
 }
 .facilities__header h2{
     font-weight: 300;
-    font-size: 40px;
+    font-size: 2.2em;
     line-height: 1;
     color: #FFFFFF;
 }
@@ -334,14 +340,16 @@ header {
     max-width: 829px;
     max-height: 555px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 144px);
-    grid-gap: 80px;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 144px));
+    grid-gap: 4.5em;
 }
 .facilities__grid-item {
     display: flex;
     flex-flow: row wrap;
     max-width: 144px;
     max-height: 118px ;
+    height: 100%;
+    width: 100%;
     justify-content: center;
     color: #ffffff;
 }
@@ -353,7 +361,7 @@ header {
     margin-top: 20px;
     width: 100%;
     max-height: 28px;
-    font-size: 18px;
+    font-size: 1em;
     font-weight: 400;
     line-height: 1.6;
     text-align: center;
@@ -496,11 +504,11 @@ footer .container {
     max-height: 277px;
     line-height: 30px;
     margin: 7% 15% auto auto;
- }
- form p{
+}
+form p{
     opacity: 0.7;
- }
- .form__input {
+}
+.form__input {
     width: 100%;
     padding: 0 0 10px 0;
     background: transparent;
@@ -512,44 +520,43 @@ footer .container {
     outline: none;
     transition: 0.3s;
     margin-bottom: 3%;
- }
- .form__title{
+}
+.form__title{
     font-weight: 600;
     font-size: 16px;
     line-height: 30px;
     margin: 0 0 46px 0;
- }
- .form__submit {
+}
+.form__submit {
     position: absolute;
     margin-top: 5px;
     margin-left: -2.6%;
- }
- .form p {
+}
+.form p {
     opacity: 0.7;
     font-family: "OpenSans",sans-serif;
     line-height: 30px;
     margin: 0 0 70px 0;
-
- }
- .policy {
+}
+.policy {
     position: relative;
     display: flex;
     margin: 7.5% 10% auto auto;
     max-width: 488px;
     max-height: 124px;
- }
- .policy__banks {
+}
+.policy__banks {
     position: absolute;
     display: flex;
     margin: 16% 0 0 0;
     right: 0;
- }
- .policy__banks ul {
+}
+.policy__banks ul {
     display: flex;
     
     
     gap: 40px;
- }
+}
 .policy p {
     font-family: 'DIN', sans-serif;
     margin-right: 1.1em;
@@ -558,6 +565,59 @@ footer .container {
     line-height: 1.2;
 }
 
-@media screen {
+@media (max-width: 1280px){
+    .header__logo {
+        margin-right: calc(100vw * 0.15);
+    }
+    .slider {
+        height: 600px;
+    }
+    .text__slider {
+        margin: 4% 26.4%;
+        font-size: calc(5vw * 0.25);
+    }
+    .text__slider p{
+        margin: 2% auto 0 auto;
+        font-size: 1.2em;
+    }
+    .cabins__wrapper img {
+        margin-left: 80px;
+        width: calc(100vw * 0.5);
+    }
+    .cabins__wrapper{
+        margin-bottom: 5%;
+    }
+    .cabins__desc {
+        margin: 3% 0 0 7%;
+        font-size: calc(10vw * 0.13);
+    }
+    .cabins__desc h2{
+        margin-bottom: 5%;
+    }
+    .facilities__header {
+        top: 10%;
+    }
+    .facitilites__grid {
+        margin-top: 20%;
+        height: auto;
+        width: 100%;
+        
+    }
+    .facilities__grid-item {
+        height: 80%;
+        width: 80%;
+    }
     
+    .forest__map iframe,
+    .forest__map-cover,
+    .forest__map-cover-bg {
+        height: 100%;
+    }
+    .forest__disc-text {
+        margin: 15% 10%
+    }
+    .footer-container
+    {
+        padding: 0 15px;
+    }
 }
