@@ -84,6 +84,7 @@ header {
 .header__btn:hover{
     background-color: #808E88;
 }
+
 :root {
     --swiper-navigation-color: #ffffff;
     --swiper-navigation-sides-offset: 37%; 
@@ -143,16 +144,16 @@ header {
 .cabins {
 
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 600px auto;
     margin-top: 11%;
     padding: 0;
-    max-height: 1100px;
+    min-height: 1100px;
     height: auto;
     width: 100%;
     color: #5B6460;
 }
 .cabins__wrapper {
-    max-height: 693px;
+    max-height: 550px;
     min-height: 438px;
     height: auto;
     width: 100%;
@@ -162,6 +163,7 @@ header {
     font-size: 16px;
     max-height: 390px;
     max-width: 465px;
+    width: auto;
     height: auto;
     margin: 5% 0 0 10%;
 }
@@ -175,7 +177,7 @@ header {
     font-size: 1em;
     line-height: 1.9;
     height: auto;
-    width: auto;
+    width: 100%;
     margin-bottom: 5%;
 }
 .cabins__desc-href{
@@ -190,22 +192,33 @@ header {
     margin-left: 105px;
 }
 .cabins__video {
+    min-height: 387px;
     width: 100%;
-    max-height: 387px;
     height: auto;
 }
 .cabins__video ul{
     display: grid;
+    justify-content: space-around;
     height: 100%;
     width: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, 415px);
+    grid-row-gap: 40px;
     padding: 0 2%;
-    grid-column-gap: 1.7em;
 }
-.cabins__video-item iframe {
+.cabins__video iframe {
+    margin: 0 auto;
     height: 100%;
     width: 100%;
 }
+.cabins__video-item {
+    height: 387px;
+    width: 100%;
+}
+.cabins__video-item__active {
+    height: 387px;
+    width: 100%;
+}
+
 .forest {
     max-height: 650px;
     height: auto;
@@ -290,6 +303,7 @@ header {
 .forest__disc {
     color: #333333;
     background-color: #E9ECE0;
+    font-size: 16px;
 
 }
 .forest__disc-text {
@@ -297,18 +311,18 @@ header {
 }
 .forest__disc h2{
     color: #5B6460;
-    font-size: 40px;
+    font-size: 2.5em;
     line-height: 1;
     font-weight: 400;
     margin-bottom: 1.2em;
 }
 .forest__disc p{
-    font-size: 16px;
+    font-size: 1em;
     line-height: 1.85;
     margin-bottom: 2em;
 }
 .forest__disc-href{
-    font-size: 16px;
+    font-size: 1em;
     font-style: italic;
     font-weight: 400;
     color: #5B6460;
@@ -320,7 +334,8 @@ header {
     justify-content: center;
     width: 100%;
     max-height: 971px;
-    height: 1000px;
+    height: auto;
+    padding-bottom: 100px;
     background:#5B6460;
     font-size: 18px;
 }
@@ -421,17 +436,18 @@ header {
     max-height: 317px;
     height: auto;
     width: auto;
+    font-size: 16px;
 }
 .social__info h2{
     color: #5B6460;
-    font-size: 40px;
+    font-size: 2.5em;
     font-weight: 400;
     line-height: 1.5;
     margin-bottom: 1.25em;
 }
 .social__info p{
     margin: 5% 0;
-    font-size: 16px;
+    font-size: 1em;
     line-height: 1.5;
 }
 .social ul{
@@ -456,6 +472,7 @@ header {
     grid-template-columns: 2fr 1fr;
     max-height: 100px;
     height: 100px;
+    font-size: 18px;
 }
 .price__btn {
     display: flex;
@@ -465,7 +482,7 @@ header {
     max-height: 100px;
     background: #5B6460;
     font-family: 'DIN',sans-serif;
-    font-size: 18px;
+    font-size: 1em;
     line-height: 1.8;
     text-transform: uppercase;
     text-align: center;
@@ -479,14 +496,13 @@ header {
     font-family: 'DIN',sans-serif;
 }
 .price-bold {
-    font-size: 20px;
+    font-size: 1.1em;
     line-height: 1.4;
     font-weight: 500;
 }
 .price-period {
     padding-left: 15%;
 }
-
 footer{
     color: #FFFFFF;
     width: 100%;
@@ -530,7 +546,7 @@ form p{
 .form__submit {
     position: absolute;
     margin-top: 5px;
-    margin-left: -2.6%;
+    margin-left: -2.8em;
 }
 .form p {
     opacity: 0.7;
@@ -548,13 +564,11 @@ form p{
 .policy__banks {
     position: absolute;
     display: flex;
-    margin: 16% 0 0 0;
+    margin: 5em 0 0 0;
     right: 0;
 }
 .policy__banks ul {
     display: flex;
-    
-    
     gap: 40px;
 }
 .policy p {
@@ -594,6 +608,16 @@ form p{
     .cabins__desc h2{
         margin-bottom: 5%;
     }
+    .cabins__video {
+        margin-bottom: 20px;
+    }
+    .cabins__video-item__active {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        height: 387px;
+        width: 415px;
+        margin: 0 auto;
+    }
     .facilities__header {
         top: 10%;
     }
@@ -618,6 +642,136 @@ form p{
     }
     .footer-container
     {
-        padding: 0 15px;
+        padding: 0 30px;
     }
+
+}
+@media (max-width: 1024px) {
+    .header__logo {
+        margin-right: 50px;
+    }
+    .slider {
+        height: 500px;
+    }
+    .text__slider {
+        margin: 4% 26.4%;
+        font-size: calc(5vw * 0.25);
+    }
+    .text__slider p{
+        margin: 2% auto 0 auto;
+        font-size: 1.3em;
+    }
+    :root {
+        --swiper-navigation-sides-offset: 32%; 
+        --swiper-navigation-top-offset: 98%;
+        --swiper-scrollbar-left: 25px; 
+        --swiper-scrollbar-sides-offset: 10%;
+    }
+    .cabins__desc {
+        font-size: calc(10vw * 0.15);
+        max-height: 500px;
+    }
+    .cabins__desc p{
+        height: 300px;
+        font-size: 1.1em;
+    }
+    .cabins__desc-href {
+        font-size: 1.2em;
+    }
+    .cabins__desc-img {
+        margin-left: 1em;
+        margin-bottom: 100px;
+
+    }
+    .social {
+        padding: 7% 7% 8% 8%;
+    }
+    .social__info {
+        font-size: 0.96em;
+    }
+    .social__info p{
+        font-size: 1.15em;
+    }
+}
+@media (max-width: 920px) {
+    .header__list {
+        font-size: 0.9em;
+        gap: calc(100vw * 0.03);
+    }
+    .header__btn {
+        width: calc(100vw * 0.22);
+        height: 60px;
+    }
+    :root {
+        --swiper-navigation-sides-offset: 31%; 
+    }
+    .cabins {
+        margin-top: 50px;
+    }
+    .cabins__wrapper{
+        height: 400px;
+        margin-bottom: 0;
+    }
+    .cabins__video {
+        margin-top: -100px;
+    }
+    .cabins__video ul {
+        margin-bottom: 20px;
+        justify-items: center;
+    }
+    .cabins__video-item {
+        height: 327px;
+        width: 365px;  
+    }
+    .cabins__video-item__active {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        height: 327px;
+        width: 365px;   
+        margin: 0 auto;
+    }
+    .forest {
+        height: 433px;
+    }
+    .forest__disc {
+        font-size: 14px;
+    }
+    .forest__disc-text {
+        margin: 50px 45px auto;
+    }
+    .forest__disc-text h2{
+        margin-bottom: 25px;
+    }
+    .facilities {
+        padding-bottom: 60px;
+    }
+    .facilities__header {
+        top: 8%;
+    }
+    .facitilites__grid {
+        margin-top: 150px;
+        justify-items: center;
+        justify-content: space-between;
+    }
+    .social__product img {
+        width: 320px;
+    }
+    .social__product-price {
+        height: 80px;
+        font-size: 15px;
+    }
+    .social__product-price .price {
+        padding: 18px;
+    }
+    
+    .policy {
+        width: 100%;
+        margin-right: 0;
+    }
+    .policy p {
+        font-size: 12px;
+    }
+}
+@media (max-width: 1280px) {
+
 }
